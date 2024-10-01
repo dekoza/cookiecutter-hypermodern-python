@@ -10,11 +10,8 @@
 [![Tests][github actions badge]][github actions page]
 [![Codecov][codecov badge]][codecov page]<br>
 [![pre-commit enabled][pre-commit badge]][pre-commit project]
-[![Black codestyle][black badge]][black project]
 [![Contributor Covenant][contributor covenant badge]][code of conduct]
 
-[black badge]: https://img.shields.io/badge/code%20style-black-000000.svg
-[black project]: https://github.com/psf/black
 [calver badge]: https://img.shields.io/badge/calver-YYYY.MM.DD-22bfda.svg
 [calver]: http://calver.org/
 [code of conduct]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/blob/main/CODE_OF_CONDUCT.md
@@ -57,41 +54,37 @@ cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
 
 - Packaging and dependency management with [Poetry]
 - Test automation with [Nox]
-- Linting with [pre-commit] and [Flake8]
+- Linting with [pre-commit] and [Ruff]
 - Continuous integration with [GitHub Actions]
 - Documentation with [Sphinx], [MyST], and [Read the Docs] using the [furo] theme
 - Automated uploads to [PyPI] and [TestPyPI]
 - Automated release notes with [Release Drafter]
 - Automated dependency updates with [Dependabot]
-- Code formatting with [Black] and [Prettier]
-- Import sorting with [isort]
+- Code formatting with [Ruff] and [Prettier]
 - Testing with [pytest]
 - Code coverage with [Coverage.py]
 - Coverage reporting with [Codecov]
 - Command-line interface with [Click]
 - Static type-checking with [mypy]
 - Runtime type-checking with [Typeguard]
-- Automated Python syntax upgrades with [pyupgrade]
-- Security audit with [Bandit] and [Safety]
+- Automated Python syntax upgrades with [Ruff]
+- Security audit with [Ruff] and [Safety]
 - Check documentation examples with [xdoctest]
 - Generate API documentation with [autodoc] and [napoleon]
 - Generate command-line reference with [sphinx-click]
 - Manage project labels with [GitHub Labeler]
 
-The template supports Python 3.7, 3.8, 3.9, and 3.10.
+The template supports Python 3.12
 
 [autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
-[bandit]: https://github.com/PyCQA/bandit
-[black]: https://github.com/psf/black
+[ruff]: https://docs.astral.sh/ruff/
 [click]: https://click.palletsprojects.com/
 [codecov]: https://codecov.io/
 [coverage.py]: https://coverage.readthedocs.io/
 [dependabot]: https://github.com/dependabot/dependabot-core
-[flake8]: http://flake8.pycqa.org
 [furo]: https://pradyunsg.me/furo/
 [github actions]: https://github.com/features/actions
 [github labeler]: https://github.com/marketplace/actions/github-labeler
-[isort]: https://pycqa.github.io/isort/
 [mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
 [napoleon]: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
@@ -101,7 +94,6 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [prettier]: https://prettier.io/
 [pypi]: https://pypi.org/
 [pytest]: https://docs.pytest.org/en/latest/
-[pyupgrade]: https://github.com/asottile/pyupgrade
 [read the docs]: https://readthedocs.org/
 [release drafter]: https://github.com/release-drafter/release-drafter
 [safety]: https://github.com/pyupio/safety

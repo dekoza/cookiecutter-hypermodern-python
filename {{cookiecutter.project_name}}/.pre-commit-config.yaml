@@ -8,11 +8,20 @@ repos:
         types: [python]
         require_serial: true
         args: ["-c", "bandit.yml"]
-      - id: black
-        name: black
-        entry: black
-        language: system
-        types: [python]
+      - id: lint
+        name: ruff lint
+        description: Run ruff to lint Python files.
+        entry: ruff check
+        language: python
+        types_or: [ python, pyi ]
+        require_serial: true
+        args: [ --fix ]
+      - id: format
+        name: ruff format
+        description: Run ruff to format Python files.
+        entry: ruff format
+        language: python
+        types_or: [ python, pyi ]
         require_serial: true
       - id: check-added-large-files
         name: Check for added large files
@@ -47,20 +56,6 @@ repos:
         types: [python]
         require_serial: true
         args: [--darglint-ignore-regex, .*]
-      - id: isort
-        name: isort
-        entry: isort
-        require_serial: true
-        language: system
-        types_or: [cython, pyi, python]
-        args: ["--filter-files"]
-      - id: pyupgrade
-        name: pyupgrade
-        description: Automatically upgrade syntax for newer versions.
-        entry: pyupgrade
-        language: system
-        types: [python]
-        args: [--py37-plus]
       - id: trailing-whitespace
         name: Trim Trailing Whitespace
         entry: trailing-whitespace-fixer
