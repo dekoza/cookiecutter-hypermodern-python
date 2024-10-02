@@ -71,11 +71,18 @@ fail_under = 100
 target-version = "py312"
 
 [tool.ruff.lint]
-select = ["E", "F", "UP", "I"]
-ignore = ["E501"]
+select = ["B","B9", "C", "D", "E", "F", "UP", "I", "N", "W"]
+ignore = ["E203", "E501"]
 
 [tool.ruff.format]
 quote-style = "single"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+max-line-length = 100
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
 
 [tool.mypy]
 strict = true
